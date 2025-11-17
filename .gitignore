@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.json
+fma_metadata
+fma_metadata_cleaned
+fma_metadata_sampled
+*.zip
+*.txt

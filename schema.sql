@@ -1,5 +1,5 @@
 -- Drop existing tables in reverse order to avoid dependency errors
-DROP TABLE IF EXISTS "Social", "Audio", "TrackLyricists", "TrackGenres", "AlbumEngineers", "ArtistLabels", "Tracks", "Licenses", "Albums", "Artists", "Labels", "Lyricists", "Engineers", "Genres";
+DROP TABLE IF EXISTS "Social", "Audio", "TrackLyricists", "TrackGenres", "AlbumEngineers", "ArtistLabels", "AlbumProducers", "TrackComposers", "Tracks", "Licenses", "Albums", "Artists", "Labels", "Lyricists", "Engineers", "Genres", "Producers", "Composers";
 
 -- ============== LOOKUP TABLES (INDEPENDENT ENTITIES) ==============
 CREATE TABLE "Genres" (
@@ -23,10 +23,21 @@ CREATE TABLE "Labels" (
     "label_name" VARCHAR(255) NOT NULL UNIQUE
 );
 
+
+CREATE TABLE "Composers" (
+    "composer_id" SERIAL PRIMARY KEY,
+    "composer_name" VARCHAR(255) NOT NULL UNIQUE
+);
+
 CREATE TABLE "Licenses" (
     "license_id" SERIAL PRIMARY KEY,
     "license_title" VARCHAR(255) NOT NULL UNIQUE,
     "license_url" VARCHAR(512)
+);
+
+CREATE TABLE "Producers" (
+    "producer_id" SERIAL PRIMARY KEY,
+    "producer_name" VARCHAR(255) NOT NULL UNIQUE
 );
 
 
@@ -38,8 +49,7 @@ CREATE TABLE "Artists" (
     "artist_handle" VARCHAR(255),
     "artist_website" VARCHAR(512),
     "artist_active_year_begin" INTEGER,
-    "artist_favorites" INTEGER,
-    "artist_members" TEXT -- Storing members as text as we can't link them to other artists
+    "artist_favorites" INTEGER
 );
 
 CREATE TABLE "Albums" (
@@ -49,6 +59,7 @@ CREATE TABLE "Albums" (
     "album_tracks" INTEGER,
     "album_date_released" DATE,
     "album_listens" INTEGER,
+    "album_favorites" INTEGER,
     "artist_id" INTEGER NOT NULL REFERENCES "Artists"("artist_id")
 );
 
@@ -57,8 +68,12 @@ CREATE TABLE "Tracks" (
     "track_title" VARCHAR(255) NOT NULL,
     "track_language_code" VARCHAR(10),
     "track_listens" INTEGER,
+    "track_favorites" INTEGER,
     "track_url" VARCHAR(512),
     "track_duration" VARCHAR(10),
+    "track_bit_rate" INTEGER,
+    "track_date_recorded" DATE,
+    "track_explicit" VARCHAR(20),
     "album_id" INTEGER REFERENCES "Albums"("album_id"),
     "artist_id" INTEGER REFERENCES "Artists"("artist_id"),
     "license_id" INTEGER REFERENCES "Licenses"("license_id")
@@ -71,6 +86,12 @@ CREATE TABLE "AlbumEngineers" (
     "album_id" INTEGER NOT NULL REFERENCES "Albums"("album_id"),
     "engineer_id" INTEGER NOT NULL REFERENCES "Engineers"("engineer_id"),
     PRIMARY KEY ("album_id", "engineer_id")
+);
+
+CREATE TABLE "AlbumProducers" (
+    "album_id" INTEGER NOT NULL REFERENCES "Albums"("album_id"),
+    "producer_id" INTEGER NOT NULL REFERENCES "Producers"("producer_id"),
+    PRIMARY KEY ("album_id", "producer_id")
 );
 
 CREATE TABLE "ArtistLabels" (
@@ -89,6 +110,12 @@ CREATE TABLE "TrackLyricists" (
     "track_id" INTEGER NOT NULL REFERENCES "Tracks"("track_id"),
     "lyricist_id" INTEGER NOT NULL REFERENCES "Lyricists"("lyricist_id"),
     PRIMARY KEY ("track_id", "lyricist_id")
+);
+
+CREATE TABLE "TrackComposers" (
+    "track_id" INTEGER NOT NULL REFERENCES "Tracks"("track_id"),
+    "composer_id" INTEGER NOT NULL REFERENCES "Composers"("composer_id"),
+    PRIMARY KEY ("track_id", "composer_id")
 );
 
 
