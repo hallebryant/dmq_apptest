@@ -13,3 +13,11 @@ docker compose exec -T postgres psql -U common-user-aph -d fma_db < schema.sql
 ## For windows
 
 type schema.sql | docker compose exec -T postgres psql -U arun-ghontale -d fma_db
+
+# 3. Create Roles
+
+docker compose exec -T postgres psql -U common-user-aph -d fma_db < security.sql
+
+## For windows
+
+type security.sql | docker compose exec -T postgres psql -U common-user-aph -d fma_db
