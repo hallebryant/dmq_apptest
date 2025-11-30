@@ -1,0 +1,165 @@
+genre_id,genre_parent_id,genre_title
+1,38.0,Avant-Garde
+2,,International
+3,,Blues
+4,,Jazz
+5,,Classical
+6,38.0,Novelty
+7,20.0,Comedy
+8,,Old-Time / Historic
+9,,Country
+10,,Pop
+11,14.0,Disco
+12,,Rock
+13,,Easy Listening
+14,,Soul-RnB
+15,,Electronic
+16,6.0,Sound Effects
+17,,Folk
+18,1235.0,Soundtrack
+19,14.0,Funk
+20,,Spoken
+21,,Hip-Hop
+22,38.0,Audio Collage
+25,12.0,Punk
+26,12.0,Post-Rock
+27,12.0,Lo-Fi
+30,38.0,Field Recordings
+31,12.0,Metal
+32,38.0,Noise
+33,17.0,Psych-Folk
+36,12.0,Krautrock
+37,4.0,Jazz: Vocal
+38,,Experimental
+41,38.0,Electroacoustic
+42,15.0,Ambient Electronic
+43,65.0,Radio Art
+45,12.0,Loud-Rock
+46,2.0,Latin America
+47,38.0,Drone
+49,17.0,Free-Folk
+53,45.0,Noise-Rock
+58,12.0,Psych-Rock
+63,9.0,Bluegrass
+64,25.0,Electro-Punk
+65,20.0,Radio
+66,12.0,Indie-Rock
+70,12.0,Industrial
+71,25.0,No Wave
+74,4.0,Free-Jazz
+76,10.0,Experimental Pop
+77,2.0,French
+79,2.0,Reggae - Dub
+81,92.0,Afrobeat
+83,21.0,Nerdcore
+85,12.0,Garage
+86,2.0,Indian
+88,12.0,New Wave
+89,25.0,Post-Punk
+90,53.0,Sludge
+92,2.0,African
+94,17.0,Freak-Folk
+97,4.0,Jazz: Out
+98,12.0,Progressive
+100,21.0,Alternative Hip-Hop
+101,31.0,Death-Metal
+102,2.0,Middle East
+103,17.0,Singer-Songwriter
+107,1235.0,Ambient
+109,25.0,Hardcore
+111,25.0,Power-Pop
+113,26.0,Space-Rock
+117,2.0,Polka
+118,2.0,Balkan
+125,38.0,Unclassifiable
+130,2.0,Europe
+137,9.0,Americana
+138,20.0,Spoken Weird
+166,65.0,Interview
+167,31.0,Black-Metal
+169,9.0,Rockabilly
+170,13.0,Easy Listening: Vocal
+171,2.0,Brazilian
+172,2.0,Asia-Far East
+173,86.0,N. Indian Traditional
+174,86.0,South Indian Traditional
+175,86.0,Bollywood
+176,2.0,Pacific
+177,2.0,Celtic
+178,4.0,Be-Bop
+179,4.0,Big Band/Swing
+180,17.0,British Folk
+181,15.0,Techno
+182,15.0,House
+183,15.0,Glitch
+184,15.0,Minimal Electronic
+185,15.0,Breakcore - Hard
+186,38.0,Sound Poetry
+187,5.0,20th Century Classical
+188,20.0,Poetry
+189,65.0,Talk Radio
+214,92.0,North African
+224,38.0,Sound Collage
+232,2.0,Flamenco
+236,15.0,IDM
+240,297.0,Chiptune
+247,38.0,Musique Concrete
+250,38.0,Improv
+267,1235.0,New Age
+286,15.0,Trip-Hop
+296,15.0,Dance
+297,15.0,Chip Music
+311,13.0,Lounge
+314,12.0,Goth
+322,5.0,Composed Music
+337,15.0,Drum & Bass
+359,12.0,Shoegaze
+360,6.0,Kid-Friendly
+361,109.0,Thrash
+362,10.0,Synth Pop
+374,20.0,Banter
+377,19.0,Deep Funk
+378,20.0,Spoken Word
+400,182.0,Chill-out
+401,181.0,Bigbeat
+404,85.0,Surf
+428,20.0,Radio Theater
+439,31.0,Grindcore
+440,12.0,Rock Opera
+441,5.0,Opera
+442,5.0,Chamber Music
+443,5.0,Choral Music
+444,5.0,Symphony
+456,38.0,Minimalism
+465,20.0,Musical Theater
+468,15.0,Dubstep
+491,468.0,Skweee
+493,651.0,Western Swing
+495,15.0,Downtempo
+502,46.0,Cumbia
+504,2.0,Latin
+514,38.0,Sound Art
+524,130.0,Romany (Gypsy)
+538,18.0,Compilation
+539,21.0,Rap
+542,21.0,Breakbeat
+567,3.0,Gospel
+580,,Abstract Hip-Hop
+602,79.0,Reggae - Dancehall
+619,130.0,Spanish
+651,9.0,Country & Western
+659,5.0,Contemporary Classical
+693,21.0,Wonky
+695,15.0,Jungle
+741,130.0,Klezmer
+763,763.0,Holiday
+806,21.0,hiphop
+808,46.0,Salsa
+810,,Nu-Jazz
+811,21.0,Hip-Hop Beats
+906,4.0,Modern Jazz
+1032,102.0,Turkish
+1060,46.0,Tango
+1156,130.0,Fado
+1193,763.0,Christmas
+1235,,Instrumental
