@@ -7,4 +7,3 @@ fma_metadata_sampled
 *.txt
 env/
 .env
-fma_metadata_cleaned

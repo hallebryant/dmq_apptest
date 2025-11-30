@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: fma
+    database: fma_db
+    schema: public
+    tables:
+      - name: Tracks
+      - name: Artists
+      - name: Genres
+      - name: Audio
+      - name: Social
+      - name: TrackGenres
