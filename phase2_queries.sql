@@ -1,6 +1,6 @@
 -- 1. Genre Fingerprinting
 SELECT
-    g.genre_title,
+    g.genre_name,
     COUNT(t.track_id) AS track_count,
     ROUND(AVG(a.danceability)::numeric, 3) AS avg_danceability,
     ROUND(AVG(a.energy)::numeric, 3) AS avg_energy
@@ -8,7 +8,7 @@ FROM "Tracks" t
 JOIN "TrackGenres" tg ON t.track_id = tg.track_id
 JOIN "Genres" g ON tg.genre_id = g.genre_id
 JOIN "Audio" a ON t.track_id = a.track_id
-GROUP BY g.genre_title
+GROUP BY g.genre_name
 HAVING COUNT(t.track_id) > 100
 ORDER BY avg_energy DESC;
 
@@ -46,7 +46,6 @@ ORDER BY s.song_hotttnesss DESC
 LIMIT 50;
 
 -- 4. Artist Profiling (Subquery)
-
 SELECT 
     a.artist_id,
     a.artist_name,
