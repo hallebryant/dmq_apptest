@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: fma
+    database: fma_db
+    schema: public
+    tables:
+      - name: Artists
+      - name: Albums
+      - name: Tracks
+      - name: Genres
+      - name: Labels
+      - name: Audio
+      - name: Social
+      - name: TrackGenres
+      - name: ArtistLabels
