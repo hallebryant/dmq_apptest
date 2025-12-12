@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Initialize connection.
-conn = st.connection("postgresql", type="sql")
+conn = st.connection.SQLConnection("postgresql", type="sql")
 
 # Perform query.
 df = conn.query('SELECT * FROM Artists;', ttl="10m")
