@@ -1,14 +1,2 @@
-.DS_Store
-.idea
-*.json
-fma_metadata
-fma_metadata_sampled
-*.zip
-*.txt
-env/
-.env
-StarSchemaReport.docx
-StarSchemaDiagram.svg
-PerformanceTuningReport.docx
-logs
-.streamlit
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
